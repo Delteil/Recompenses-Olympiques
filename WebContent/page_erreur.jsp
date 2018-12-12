@@ -10,7 +10,8 @@
 <title>Page not found</title>
 </head>
 <body>
-	<h3>Sorry! Page not found</h3>
-	<h1>404</h1>
+	<c:if test="${!empty login}"></c:if>
+	<script>alert('login ou mot de passe incorrect');</script>
+	
 </body>
 </html>

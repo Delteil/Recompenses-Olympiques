@@ -45,7 +45,7 @@ public class ConnexionServlet extends HttpServlet {
 			response.sendRedirect(request.getContextPath() + "/bienvenue.jsp");
 		}
 		else if (login.equals("") || (motDePasse.equals(""))) {
-            response.sendRedirect("/page_erreur.jsp");
+            response.sendRedirect(request.getContextPath() + "/page_erreur.jsp");
         }
 	}
 }
