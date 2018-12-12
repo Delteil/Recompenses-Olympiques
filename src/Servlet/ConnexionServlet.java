@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class Connexion
  */
-@WebServlet("/Connexion")
-public class Connexion extends HttpServlet {
+@WebServlet("/connexion")
+public class ConnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Connexion() {
+	public ConnexionServlet() {
 		super();
 	}
 
@@ -42,11 +42,10 @@ public class Connexion extends HttpServlet {
 			session.setAttribute(login, login);
 			session.setAttribute(motDePasse, motDePasse);
 
-			response.sendRedirect(request.getContextPath() + "/Bienvenue.jsp");
+			response.sendRedirect(request.getContextPath() + "/bienvenue.jsp");
 		}
-		
 		else if (login.equals("") || (motDePasse.equals(""))) {
-            response.sendRedirect("/PageErreur.jsp");
+            response.sendRedirect("/page_erreur.jsp");
         }
 	}
 }

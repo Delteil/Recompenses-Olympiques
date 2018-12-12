@@ -2,15 +2,20 @@
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Page not found</title>
+<title>Accueil</title>
 </head>
+
 <body>
-	<h3>Sorry! Page not found</h3>
-	<h1>404</h1>
+
+	<h1>Bienvenue</h1>
+
+	<c:if test = "${empty login}">
+	<a href = "<c:url value="home"/>">Connexion</a>
+	</c:if>
+	
 </body>
 </html>

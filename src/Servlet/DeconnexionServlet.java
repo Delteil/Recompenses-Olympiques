@@ -11,14 +11,14 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class Deconnexion
  */
-@WebServlet("/Deconnexion")
-public class Deconnexion extends HttpServlet {
+@WebServlet("/deconnexion")
+public class DeconnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Deconnexion() {
+    public DeconnexionServlet() {
         super();
     }
 
@@ -33,6 +33,7 @@ public class Deconnexion extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		session.invalidate();
 		
+		response.sendRedirect(request.getContextPath() + "/home.jsp");
 		
 	}
 

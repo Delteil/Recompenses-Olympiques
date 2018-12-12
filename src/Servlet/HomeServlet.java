@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PageErreur
  */
-@WebServlet("/Accueil")
-public class Accueil extends HttpServlet {
+@WebServlet("/home")
+public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Accueil() {
+	public HomeServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -31,9 +31,9 @@ public class Accueil extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Connexion.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/connexion.jsp");
 		dispatcher.forward(request, response);
 
 	}
@@ -45,7 +45,7 @@ public class Accueil extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }

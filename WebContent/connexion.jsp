@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
 </head>
 <body>
 	<fieldset>
-		<form method="post" action=Connexion>
+		<form method="post" action=connexion>
 			<legend>Connexion</legend>
 			<br/>
 			<label for="login"> Login </label>
