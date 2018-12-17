@@ -27,9 +27,7 @@ public class ConnexionServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		// Récupération des champs du formulaire. //
 		String login = request.getParameter("login");
@@ -43,9 +41,9 @@ public class ConnexionServlet extends HttpServlet {
 			session.setAttribute(motDePasse, motDePasse);
 
 			response.sendRedirect(request.getContextPath() + "/bienvenue.jsp");
+			
+		} else if (login.equals("") || (motDePasse.equals(""))) {
+			response.sendRedirect(request.getContextPath() + "/page_erreur.jsp");
 		}
-		else if (login.equals("") || (motDePasse.equals(""))) {
-            response.sendRedirect(request.getContextPath() + "/page_erreur.jsp");
-        }
 	}
 }

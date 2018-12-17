@@ -14,7 +14,11 @@
 	<h1>Bienvenue</h1>
 
 	<c:if test = "${empty login}">
-	<a href = "<c:url value="home"/>">Connexion</a>
+	
+	<a href = "<c:url value="home"/>">
+	<button type="button">Connexion</button>
+	</a>
+		
 	</c:if>
 	
 </body>

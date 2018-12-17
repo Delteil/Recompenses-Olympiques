@@ -19,9 +19,8 @@
 			<br /> 
 			<label for="motdepasse">Mot de passe </label>
 			<input type="password" name="motdepasse" />
-				<br/> 
-				
-			<input type="submit" />
+				<br/> 	
+			<button type="submit" class="btn btn-primary">Envoyer</button>
 				<br/>
 		</form>
 	</fieldset>
